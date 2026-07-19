@@ -13,4 +13,6 @@ public class SkillDto {
 
     @NotBlank(message = "Skill name is required")
     private String name;
+
+    private int proficiency = 80;
 }

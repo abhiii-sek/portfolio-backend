@@ -199,23 +199,8 @@ public class PublicPortfolioService {
     }
 
     @Transactional(readOnly = true)
-    public List<Map<String, Object>> getSkills() {
-        List<Skill> skills = skillRepository.findAll();
-        Map<String, List<String>> grouped = skills.stream()
-                .collect(Collectors.groupingBy(
-                        Skill::getCategory,
-                        LinkedHashMap::new,
-                        Collectors.mapping(Skill::getName, Collectors.toList())
-                ));
-
-        List<Map<String, Object>> skillList = new ArrayList<>();
-        grouped.forEach((category, items) -> {
-            Map<String, Object> map = new LinkedHashMap<>();
-            map.put("category", category);
-            map.put("items", items);
-            skillList.add(map);
-        });
-        return skillList;
+    public List<Skill> getSkills() {
+        return skillRepository.findAll();
     }
 
     @Transactional(readOnly = true)
