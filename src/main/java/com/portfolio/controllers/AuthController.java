@@ -32,28 +32,23 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@Valid @RequestBody LoginDto loginDto) {
-        try {
-            Authentication authentication = authenticationManager.authenticate(
-                    new UsernamePasswordAuthenticationToken(loginDto.getEmail(), loginDto.getPassword())
-            );
+        Authentication authentication = authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(loginDto.getEmail(), loginDto.getPassword())
+        );
 
-            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-            String jwtToken = jwtService.generateToken(userDetails);
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        String jwtToken = jwtService.generateToken(userDetails);
 
-            User user = userRepository.findByEmail(loginDto.getEmail())
-                    .orElseThrow(() -> new RuntimeException("Authenticated user details not found in database."));
+        User user = userRepository.findByEmail(loginDto.getEmail())
+                .orElseThrow(() -> new RuntimeException("Authenticated user details not found in database."));
 
-            JwtResponseDto responseDto = new JwtResponseDto(
-                    jwtToken,
-                    user.getEmail(),
-                    user.getName(),
-                    user.getRole().name()
-            );
+        JwtResponseDto responseDto = new JwtResponseDto(
+                jwtToken,
+                user.getEmail(),
+                user.getName(),
+                user.getRole().name()
+        );
 
-            return ResponseEntity.ok(responseDto);
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw e;
-        }
+        return ResponseEntity.ok(responseDto);
     }
 }

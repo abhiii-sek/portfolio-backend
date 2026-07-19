@@ -1,7 +1,6 @@
 package com.portfolio.controllers;
 
 import com.portfolio.entities.ContactMessage;
-import com.portfolio.entities.Skill;
 import com.portfolio.repositories.ContactMessageRepository;
 import com.portfolio.services.PublicPortfolioService;
 import com.portfolio.services.VisitorAnalyticService;
@@ -57,7 +56,7 @@ public class PublicApiController {
     }
 
     @GetMapping("/portfolio/skills")
-    public ResponseEntity<List<Skill>> getSkills() {
+    public ResponseEntity<List<Map<String, Object>>> getSkills() {
         return ResponseEntity.ok(publicPortfolioService.getSkills());
     }
 

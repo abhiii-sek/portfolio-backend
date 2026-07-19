@@ -51,12 +51,12 @@ public class DataSeeder implements CommandLineRunner {
         if (userRepository.count() == 0) {
             User admin = new User();
             admin.setName("Admin User");
-            admin.setEmail("abbieekumar@gmail.com");
-            admin.setPhoneNumber("8882519811");
-            admin.setPassword(passwordEncoder.encode("@1B2h8i9"));
+            admin.setEmail("admin@portfolio.com");
+            admin.setPhoneNumber("1234567890");
+            admin.setPassword(passwordEncoder.encode("admin123"));
             admin.setRole(com.portfolio.enums.Role.ADMIN);
             userRepository.save(admin);
-            System.out.println("Seeded default admin user: abbieekumar@gmail.com / @1B2h8i9");
+            System.out.println("Seeded default admin user: admin@portfolio.com / admin123");
         }
 
         boolean databaseEmpty = personalInfoRepository.count() == 0;
@@ -229,28 +229,7 @@ public class DataSeeder implements CommandLineRunner {
                     JsonNode itemsNode = skillCatNode.get("items");
                     if (itemsNode != null && itemsNode.isArray()) {
                         for (JsonNode itemNode : itemsNode) {
-                            int defaultProficiency = 80;
-                            switch (category) {
-                                case "Programming Languages":
-                                    defaultProficiency = 90;
-                                    break;
-                                case "Databases":
-                                    defaultProficiency = 80;
-                                    break;
-                                case "Frameworks":
-                                    defaultProficiency = 85;
-                                    break;
-                                case "Tools & Platforms":
-                                    defaultProficiency = 75;
-                                    break;
-                                case "Core CS":
-                                    defaultProficiency = 80;
-                                    break;
-                                case "Soft Skills":
-                                    defaultProficiency = 95;
-                                    break;
-                            }
-                            Skill skill = new Skill(category, itemNode.asText(), defaultProficiency);
+                            Skill skill = new Skill(category, itemNode.asText());
                             skill.setSkillId(java.util.UUID.randomUUID().toString());
                             skillRepository.save(skill);
                         }
