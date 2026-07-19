@@ -1,0 +1,285 @@
+{
+  "app_name": "Abhishek Kumar - Portfolio",
+  "navigation": {
+    "items": [
+      {
+        "id": "home",
+        "title": "Home"
+      },
+      {
+        "id": "about",
+        "title": "About"
+      },
+      {
+        "id": "experience",
+        "title": "Experience"
+      },
+      {
+        "id": "projects",
+        "title": "Projects"
+      },
+      {
+        "id": "skills",
+        "title": "Skills"
+      },
+      {
+        "id": "contact",
+        "title": "Contact"
+      }
+    ]
+  },
+  "translations": {
+    "app_name": "Abhishek Kumar - Portfolio",
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "explore_more": "Explore More",
+    "personal_info": "Personal Info",
+    "education": "Education",
+    "languages": "Languages",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "send_message": "Send Message",
+    "contact_me": "Contact Me",
+    "your_name": "Your Name",
+    "your_email": "Your Email",
+    "your_message": "Your Message",
+    "send": "Send",
+    "subject": "Subject",
+    "portfolio_loading": "Portfolio Loading...",
+    "error_name": "Please enter your name",
+    "error_email": "Please enter a valid email",
+    "error_subject": "Please enter a subject",
+    "error_message": "Please enter your message"
+  },
+  "animations": {
+    "loading_animation": "assets/animations/loading.json",
+    "scroll_animation_duration": 500,
+    "page_transition_duration": 300
+  },
+  "social_links": {
+    "github": "https://github.com/abhiii-sek",
+    "linkedin": "https://linkedin.com/in/abhiii-sek/",
+    "leetcode": "https://leetcode.com/u/abhiii_sek/",
+    "instagram": "https://instagram.com/abhiii_sek/"
+  },
+  "cv_data": {
+    "personal_info": {
+      "name": "Abhishek Kumar Pal",
+      "title": "Software Engineer | Flutter Developer",
+      "phone": "8882519811",
+      "email": "abbieekumar@gmail.com",
+      "location": "Noida, India",
+      "github": "https://github.com/abhiii-sek",
+      "linkedin": "https://linkedin.com/in/abhiii-sek/",
+      "leetcode": "https://leetcode.com/u/abhiii_sek/",
+      "instagram": "https://instagram.com/abhiii_sek/",
+      "resumeUrl": "https://drive.google.com/file/d/1JoFmbosTymTYkbMlJYOqnztcdIUmArR6/view?usp=drivesdk",
+      "bio": "I am a Java Software Developer and Full Stack Fresher specializing in building scalable backend services with Spring Boot and cross-platform mobile/web apps with Flutter. Experienced in multithreaded architecture, API optimization, feedback module integration. Here is my some works",
+      "tagline": "Crafting high-performance backends and interactive software experiences",
+      "stats": {
+        "years_experience": 1,
+        "projects_completed": 9,
+        "technologies": 15
+      },
+      "subtitles": [
+        "Backend Developer",
+        "App Developer"
+      ]
+    },
+    "experiences": [
+      {
+        "title": "Software Developer",
+        "company": "Onelap Telematic Private Limited",
+        "position": "Software Developer ",
+        "start_date": "13 Feb 2026",
+        "end_date": "Present",
+        "period": "August 2025 — Present",
+        "description": "Built and Integrated Sim lifecycle module for IOT devices like GPS Tracker, Dashcams, covering SIM Activation, recharge flows, and user tutorials. Enhanced CRM ticketing system by fixing critical issues in workflows, optimized high-latency backend APIs using java multithreading, improved downtime, significantly improving issue resolution efficiency. Designed and integrated Automation bot, and templates for feedback collections and live chat feature. Integrated Feedback Management Module for support executives, enabling feedback collection via WhatsApp (Wati), mobile app and SMS links, all centrally managed by CRM. Integrated third-party Calling services (Zoho Desk, Servatel) to streamline customer support operations. Developed and optimized flutter Application, fixing performance bottlenecks, and improved app stability.",
+        "technologies": [
+          "Java",
+          "Flutter",
+          "Spring Boot",
+          "Multithreading",
+          "CRM",
+          "WhatsApp API",
+          "Zoho Desk",
+          "Servatel"
+        ]
+      },
+      {
+        "title": "Software Developer Intern",
+        "company": "Onelap Telematic Private Limited",
+        "position": "Software Developer Intern",
+        "start_date": "11 Aug 2025",
+        "end_date": "Present",
+        "period": "August 2025 — Feb 2026",
+        "description": "Built and Integrated Sim lifecycle module for IOT devices like GPS Tracker, Dashcams, covering SIM Activation, recharge flows, and user tutorials. Enhanced CRM ticketing system by fixing critical issues in workflows, optimized high-latency backend APIs using java multithreading, improved downtime, significantly improving issue resolution efficiency. Designed and integrated Automation bot, and templates for feedback collections and live chat feature. Integrated Feedback Management Module for support executives, enabling feedback collection via WhatsApp (Wati), mobile app and SMS links, all centrally managed by CRM. Integrated third-party Calling services (Zoho Desk, Servatel) to streamline customer support operations. Developed and optimized flutter Application, fixing performance bottlenecks, and improved app stability.",
+        "technologies": [
+          "Java",
+          "Flutter",
+          "Spring Boot",
+          "Multithreading",
+          "CRM",
+          "WhatsApp API",
+          "Zoho Desk",
+          "Servatel"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "title": "AI-Mailing",
+        "category": "Spring Boot & React.js",
+        "description": "Built An AI powered email assistants that's generates and replies to email with customizable tones, reducing drafting efforts to 70-90 %. Also integrated as Chrome Extension for Seamless Gmail replies. Implemented JWT-based authentication and authorization to protect user sessions and secure Gmail-related operations. Developed a React-based frontend with a clean, intuitive UI enabling users to paste emails, generate replies, and copy responses seamlessly.",
+        "url": "https://github.com/mr-abhi-coder/AI-Mailing",
+        "image": "assets/images/project_default.png",
+        "problem": "Manual drafting of business and professional emails takes significant time and effort, leading to lower productivity and inconsistent response tones.",
+        "solution": "Built a Chrome extension and React web application powered by Generative AI that generates customized responses based on email context and tone preferences, backed by a Spring Boot JWT-authenticated service.",
+        "result": "Reduced email drafting times by 70-90% and secured operations using industry-standard JWT authorization."
+      },
+      {
+        "title": "TextFlix-AI",
+        "category": "Python & Generative AI",
+        "description": "Designed and implemented end to end automated AI pipeline that's converts a single text into videos optimized for Instagram reels, and YouTube shorts. Built a multi-model generative workflow using Gemini for script generation, Pollination AI for image generation, Eleven labs for humanly voiceover, ffmpeg for final video composition with subtitles. Built flutter Application for client-side and integrated SQL lite for persistence storage.",
+        "url": "https://github.com/mr-abhi-coder/minorproject-backend",
+        "image": "assets/images/project_default.png",
+        "problem": "Creating short-form video content manually requires intensive editing, scriptwriting, voiceover recording, and visual generation, which is time-consuming for content creators.",
+        "solution": "Developed an end-to-end automated pipeline integrating Gemini, Pollination AI, Eleven Labs, and FFMPEG to compile videos from raw text inputs, paired with a Flutter app using SQLite.",
+        "result": "Fully automated video generation, producing Reels and Shorts directly from text prompts."
+      },
+      {
+        "title": "Bank Management System",
+        "category": "Terminal",
+        "description": "Built a terminal based Bank management system which can do basic bank operations like balance check, add amount, money transfer to other account, create account",
+        "url": "https://github.com/abhiii-sek/BankManagementSystem",
+        "image": "assets/images/project_default.png",
+        "problem": "faced difficulty on connecting backend to mysql",
+        "solution": "Used AIs, youtube videos to understood about jdbc, dependencies",
+        "result": "complete Bank operations features implemented"
+      },
+      {
+        "title": "Snake-game",
+        "category": "Desktop Game",
+        "description": "built a Desktop based snake game. User try to eat food and grows bigger without colliding with his body and walls",
+        "url": "https://github.com/abhiii-sek/Snake-Game",
+        "image": "assets/images/project_default.png",
+        "problem": "Not my experts",
+        "solution": "built it by watching youtube tutorial",
+        "result": "learnt new technologies"
+      }
+    ],
+    "skills": [
+      {
+        "category": "Programming Languages",
+        "items": [
+          "Java 8, 21",
+          "JavaScript",
+          "HTML",
+          "CSS",
+          "Python"
+        ]
+      },
+      {
+        "category": "Databases",
+        "items": [
+          "MySQL",
+          "PostgreSQL",
+          "JDBC"
+        ]
+      },
+      {
+        "category": "Frameworks",
+        "items": [
+          "Spring Boot",
+          "Spring Data JPA",
+          "Spring Security",
+          "React.js",
+          "Tailwind",
+          "Flutter"
+        ]
+      },
+      {
+        "category": "Tools & Platforms",
+        "items": [
+          "Git",
+          "GitHub",
+          "IntelliJ",
+          "VS Code",
+          "Postman",
+          "Maven",
+          "Wati",
+          "Grafana"
+        ]
+      },
+      {
+        "category": "Core CS",
+        "items": [
+          "Data Structures & Algorithms",
+          "Object Oriented Programming",
+          "DBMS",
+          "Computer Networks"
+        ]
+      },
+      {
+        "category": "Soft Skills",
+        "items": [
+          "Collaboration",
+          "Communication",
+          "Teamwork",
+          "Time Management"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "school": "Maharaja Agrasen Institute of Technology",
+        "degree": "Bachelor of Technology",
+        "from": 2022,
+        "to": 2026,
+        "percentage": 93
+      },
+      {
+        "school": "Guru Tegh Bahadur Polytechnic Institute",
+        "degree": "Diploma Schooling",
+        "from": 2020,
+        "to": 2022,
+        "percentage": 78.0
+      },
+      {
+        "school": "Kendriya Vidyalaya AFS Tughlakabad",
+        "degree": "Senior Schooling",
+        "from": 2018,
+        "to": 2020,
+        "percentage": 79.0
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "I can do this all day",
+        "name": "Steve Roger",
+        "position": "Lead",
+        "company": "MCU"
+      },
+      {
+        "quote": "Even 1% chance is enough for me",
+        "name": "Virat Kohli",
+        "position": "Captain",
+        "company": "RCB"
+      },
+      {
+        "quote": "A intelligence fear of other's intelligence",
+        "name": "Tony Stark",
+        "position": "Co-lead",
+        "company": "MCU"
+      }
+    ]
+  }
+}
