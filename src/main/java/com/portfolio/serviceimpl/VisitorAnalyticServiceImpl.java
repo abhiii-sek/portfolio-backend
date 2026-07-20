@@ -25,6 +25,7 @@ public class VisitorAnalyticServiceImpl implements VisitorAnalyticService {
     @Override
     public void addAnalytic(Map<String, Object> payload) {
         VisitorAnalytic analytic = new VisitorAnalytic();
+        analytic.setVisitorId((String) payload.get("visitor_id"));
         analytic.setIp((String) payload.get("ip"));
         analytic.setCity((String) payload.get("city"));
         analytic.setCountry((String) payload.get("country"));
