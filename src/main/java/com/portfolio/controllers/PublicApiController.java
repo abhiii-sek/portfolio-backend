@@ -1,7 +1,9 @@
 package com.portfolio.controllers;
 
 import com.portfolio.entities.ContactMessage;
+import com.portfolio.entities.EasterMessage;
 import com.portfolio.repositories.ContactMessageRepository;
+import com.portfolio.repositories.EasterMessageRepository;
 import com.portfolio.services.PublicPortfolioService;
 import com.portfolio.services.VisitorAnalyticService;
 import com.portfolio.services.EmailService;
@@ -23,6 +25,9 @@ public class PublicApiController {
 
     @Autowired
     private ContactMessageRepository contactMessageRepository;
+
+    @Autowired
+    private EasterMessageRepository easterMessageRepository;
 
     @Autowired
     private VisitorAnalyticService visitorAnalyticService;
@@ -91,6 +96,26 @@ public class PublicApiController {
         visitorAnalyticService.addAnalytic(payload);
         Map<String, Object> response = new HashMap<>();
         response.put("success", true);
+        return ResponseEntity.ok(response);
+    }
+
+    @PostMapping("/easter-add-messages")
+    public ResponseEntity<Map<String, Object>> submitBirthdayWish(@RequestBody EasterMessage wish) {
+        easterMessageRepository.save(wish);
+        Map<String, Object> response = new HashMap<>();
+        response.put("success", true);
+        response.put("message", "Wish saved successfully");
+        return ResponseEntity.ok(response);
+    }
+
+    @PostMapping("/easter-send-email")
+    public ResponseEntity<Map<String, Object>> sendEasterMessagesEmail() {
+        List<EasterMessage> wishes = easterMessageRepository.findAll();
+        CompletableFuture.runAsync(() -> emailService.sendEasterMessagesEmail(wishes));
+        easterMessageRepository.deleteAll();
+        Map<String, Object> response = new HashMap<>();
+        response.put("success", true);
+        response.put("message", "Easter messages email triggered and messages table cleared");
         return ResponseEntity.ok(response);
     }
 }

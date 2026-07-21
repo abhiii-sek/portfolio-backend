@@ -1,9 +1,9 @@
 package com.portfolio.serviceimpl;
 
 import com.portfolio.entities.ContactMessage;
+import com.portfolio.entities.EasterMessage;
 import com.portfolio.services.EmailService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
@@ -44,6 +44,37 @@ public class EmailServiceImpl implements EmailService {
                 "Sender Email: " + message.getEmail() + "\n\n" +
                 "Message:\n" + message.getMessage() + "\n\n" +
                 "Received at: " + message.getCreatedAt());
+        return mailMessage;
+    }
+
+    @Override
+    public void sendEasterMessagesEmail(List<EasterMessage> wishes) {
+        if (mailSender == null || wishes == null || wishes.isEmpty()) {
+            return;
+        }
+
+        for (EasterMessage wish : wishes) {
+            try {
+                SimpleMailMessage mailMessage = getSimpleMailMessage(wish);
+                mailSender.send(mailMessage);
+            } catch (Exception e) {
+                System.out.println("Failed to send Easter Message email: " + e.getMessage());
+            }
+        }
+    }
+
+    private SimpleMailMessage getSimpleMailMessage(EasterMessage wish) {
+        SimpleMailMessage mailMessage = new SimpleMailMessage();
+        mailMessage.setFrom(toEmail);
+        mailMessage.setTo(toEmail);
+        mailMessage.setSubject("New Easter Message from " + wish.getName());
+
+        String content = "You received a new Easter Message:\n\n" +
+                "Sender Name: " + wish.getName() + "\n\n" +
+                "Message:\n" + wish.getMessage() + "\n\n" +
+                "Sent at: " + wish.getCreatedAt();
+
+        mailMessage.setText(content);
         return mailMessage;
     }
 }
