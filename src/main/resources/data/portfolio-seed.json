@@ -140,7 +140,7 @@
         "category": "Spring Boot & React.js",
         "description": "Built An AI powered email assistants that's generates and replies to email with customizable tones, reducing drafting efforts to 70-90 %. Also integrated as Chrome Extension for Seamless Gmail replies. Implemented JWT-based authentication and authorization to protect user sessions and secure Gmail-related operations. Developed a React-based frontend with a clean, intuitive UI enabling users to paste emails, generate replies, and copy responses seamlessly.",
         "url": "https://github.com/mr-abhi-coder/AI-Mailing",
-        "image": "assets/images/project_default.png",
+        "image": "assets/images/project_ai_mailing.png",
         "problem": "Manual drafting of business and professional emails takes significant time and effort, leading to lower productivity and inconsistent response tones.",
         "solution": "Built a Chrome extension and React web application powered by Generative AI that generates customized responses based on email context and tone preferences, backed by a Spring Boot JWT-authenticated service.",
         "result": "Reduced email drafting times by 70-90% and secured operations using industry-standard JWT authorization."
@@ -150,7 +150,7 @@
         "category": "Python & Generative AI",
         "description": "Designed and implemented end to end automated AI pipeline that's converts a single text into videos optimized for Instagram reels, and YouTube shorts. Built a multi-model generative workflow using Gemini for script generation, Pollination AI for image generation, Eleven labs for humanly voiceover, ffmpeg for final video composition with subtitles. Built flutter Application for client-side and integrated SQL lite for persistence storage.",
         "url": "https://github.com/mr-abhi-coder/minorproject-backend",
-        "image": "assets/images/project_default.png",
+        "image": "assets/images/project_textflix_ai.png",
         "problem": "Creating short-form video content manually requires intensive editing, scriptwriting, voiceover recording, and visual generation, which is time-consuming for content creators.",
         "solution": "Developed an end-to-end automated pipeline integrating Gemini, Pollination AI, Eleven Labs, and FFMPEG to compile videos from raw text inputs, paired with a Flutter app using SQLite.",
         "result": "Fully automated video generation, producing Reels and Shorts directly from text prompts."
@@ -160,7 +160,7 @@
         "category": "Terminal",
         "description": "Built a terminal based Bank management system which can do basic bank operations like balance check, add amount, money transfer to other account, create account",
         "url": "https://github.com/abhiii-sek/BankManagementSystem",
-        "image": "assets/images/project_default.png",
+        "image": "assets/images/project_bank_management.png",
         "problem": "faced difficulty on connecting backend to mysql",
         "solution": "Used AIs, youtube videos to understood about jdbc, dependencies",
         "result": "complete Bank operations features implemented"
@@ -170,7 +170,7 @@
         "category": "Desktop Game",
         "description": "built a Desktop based snake game. User try to eat food and grows bigger without colliding with his body and walls",
         "url": "https://github.com/abhiii-sek/Snake-Game",
-        "image": "assets/images/project_default.png",
+        "image": "assets/images/project_snake_game.png",
         "problem": "Not my experts",
         "solution": "built it by watching youtube tutorial",
         "result": "learnt new technologies"
