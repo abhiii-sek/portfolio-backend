@@ -16,7 +16,7 @@ out/
 .settings/
 bin/
 
-# OS files
+# macOS / Windows
 .DS_Store
 Thumbs.db
 
@@ -24,9 +24,16 @@ Thumbs.db
 logs/
 *.log
 
-# Environment files
+# Environment
 .env
 .env.*
 
 # Local configuration
-local.propertiesq
+local.properties
+
+# Docker
+mysql-data/
+docker-data/
+
+# Temporary files
+*.tmp
